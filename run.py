@@ -16,13 +16,17 @@ async def fill_queue(connection: Connection, marketplace: str) -> None:
     channel = await connection.channel()
 
     async with channel:
-        channel.publisher_confirms()
+        channel.publisher_confirms = True
         exchange = channel.default_exchange
         queue = await channel.declare_queue(
             name=infra.search_queue, durable=True, arguments={"x-max-priority": 10}
         )
 
-        await filler.fill(exchange=exchange, marketplace=marketplace)
+        await filler.fill(
+            exchange=exchange,
+            queue=queue.name,
+            marketplace=marketplace,
+        )
 
 
 async def main():
