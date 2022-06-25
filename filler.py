@@ -2,7 +2,7 @@ from aio_pika.abc import DeliveryMode
 from aio_pika.exchange import Exchange
 from aio_pika.message import Message
 from page_infra import Infra
-from rabbit_models.search_scraper import Body
+from rabbit_models.search_scraper import Body, Metadata
 from structlog.stdlib import BoundLogger, get_logger
 from url_builder import Builder
 
@@ -28,6 +28,7 @@ class Filler:
             body = Body(
                 url=url,
                 marketplace=marketplace,
+                metadata=Metadata(query=doc["query"], source="FILLER"),
             )
 
             messages.append(body.json())

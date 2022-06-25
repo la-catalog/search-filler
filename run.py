@@ -1,7 +1,7 @@
 import asyncio
 import os
 
-from aio_pika import Connection, connect
+from aio_pika import Connection, IncomingMessage, connect
 from page_infra.options import get_marketplace_infra
 from structlog.stdlib import get_logger
 
@@ -21,6 +21,10 @@ async def fill_queue(connection: Connection, marketplace: str) -> None:
         queue = await channel.declare_queue(
             name=infra.search_queue, durable=True, arguments={"x-max-priority": 10}
         )
+        message = await queue.get(fail=False)
+
+        if message:
+            return await message.nack()
 
         await filler.fill(
             exchange=exchange,
