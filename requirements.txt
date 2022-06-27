@@ -1,7 +1,6 @@
 aio-pika==8.0.3
 aiormq==6.3.3
 async-timeout==4.0.2
-bson==0.5.10
 certifi==2022.6.15
 charset-normalizer==2.0.12
 Deprecated==1.2.13
