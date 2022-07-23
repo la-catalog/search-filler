@@ -19,7 +19,7 @@ async def fill_queue(connection: Connection, marketplace: str) -> None:
         channel.publisher_confirms = True
         exchange = channel.default_exchange
         queue = await channel.declare_queue(
-            name=infra.search_queue, durable=True, arguments={"x-max-priority": 10}
+            name=infra.search_queue, durable=True, arguments={"x-max-priority": 10, "x-queue-mode": "lazy"}
         )
         message = await queue.get(fail=False)
 
