@@ -1,0 +1,38 @@
+[project]
+name = "search-filler"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "thiagola92", email = "thiagola92@gmail.com"},
+]
+dependencies = [
+    "aio-pika>=8.0.3",
+    "structlog>=22.1.0",
+    "page-infra @ git+https://github.com/la-catalog/page-infra.git",
+    "rabbit-models @ git+https://github.com/la-catalog/rabbit-models.git",
+    "url-builder @ git+https://github.com/la-catalog/url-builder.git",
+]
+
+[project.urls]
+repository = "https://github.com/la-catalog/search-filler"
+
+[tool.pdm]
+
+[tool.pdm.scripts]
+sort = "python -m isort -v --ac ."
+
+[tool.pdm.dev-dependencies]
+lint = [
+    "black",
+    "isort"
+]
+
+# [[tool.pdm.source]]
+# url = "https://private-site.org/pypi/simple"
+# verify_ssl = false
+# name = "lacatalog"
+
+[build-system]
+requires = ["pdm-pep517>=0.12.0"]
+build-backend = "pdm.pep517.api"
