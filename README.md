@@ -1,2 +1,2 @@
 # search-filler
-Coleta do Mongo todas as queries a se adicionar na fila do Rabbit de cada marketplace.  
+Cron job para periodicamente encher as filas de buscas dos marketplaces caso elas estejam vazias ou prestes a ficar.  
