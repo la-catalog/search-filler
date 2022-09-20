@@ -140,7 +140,7 @@ name = "page-infra"
 version = "0.1.0"
 requires_python = ">=3.10"
 git = "https://github.com/la-catalog/page-infra.git"
-revision = "59bf21164cf821565533b70fd12fd73cfe4241f8"
+revision = "be22b0eb8e5dc897cd2b9add1e10dd955e8d4bc7"
 summary = ""
 dependencies = [
     "aio-pika>=8.0.3",
@@ -209,7 +209,7 @@ name = "rabbit-models"
 version = "0.1.0"
 requires_python = ">=3.10"
 git = "https://github.com/la-catalog/rabbit-models.git"
-revision = "fb19f3356e921c92542b585a433e4ebf888c5ac5"
+revision = "623f9f46aed4757c4be359cd76759e7f5eb441e4"
 summary = ""
 dependencies = [
     "pydantic>=1.9.1",
@@ -261,7 +261,7 @@ name = "url-builder"
 version = "0.1.0"
 requires_python = ">=3.10"
 git = "https://github.com/la-catalog/url-builder.git"
-revision = "9b68416501725cb7d63dd2c1ebf7ef0cdca9ed44"
+revision = "08ced6b33633bb4e34db3493cba90584e3faf80f"
 summary = ""
 dependencies = [
     "pydantic>=1.9.2",
