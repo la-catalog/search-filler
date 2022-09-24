@@ -1,6 +1,6 @@
 [[package]]
 name = "aio-pika"
-version = "8.2.1"
+version = "8.2.2"
 requires_python = ">3.6, <4"
 summary = "Wrapper for the aiormq for asyncio and humans."
 dependencies = [
@@ -140,7 +140,7 @@ name = "page-infra"
 version = "0.1.0"
 requires_python = ">=3.10"
 git = "https://github.com/la-catalog/page-infra.git"
-revision = "be22b0eb8e5dc897cd2b9add1e10dd955e8d4bc7"
+revision = "82aec902f09768f8f63a4ee15b1437a419a9900d"
 summary = ""
 dependencies = [
     "aio-pika>=8.0.3",
@@ -261,7 +261,7 @@ name = "url-builder"
 version = "0.1.0"
 requires_python = ">=3.10"
 git = "https://github.com/la-catalog/url-builder.git"
-revision = "08ced6b33633bb4e34db3493cba90584e3faf80f"
+revision = "146b9b65799f0fcedae8594d802ff2ac49ceea49"
 summary = ""
 dependencies = [
     "pydantic>=1.9.2",
@@ -295,8 +295,9 @@ lock_version = "4.0"
 content_hash = "sha256:4a183fa132feff285b2ae1e3fe022719688e83600640e50a72affe981dd6142a"
 
 [metadata.files]
-"aio-pika 8.2.1" = [
-    {url = "https://files.pythonhosted.org/packages/96/e1/5035b9e668d5a341b2a3d94ff2f289cc4c1933dabcabca55c6659e532d4e/aio-pika-8.2.1.tar.gz", hash = "sha256:e6aa366526f4e03d1040757ee5104860186be91b10e0a82c3e610d8ecb55dd5b"},
+"aio-pika 8.2.2" = [
+    {url = "https://files.pythonhosted.org/packages/27/a3/149746c28ea706406dcc6cca95c410163e4543898008d021e437e8819675/aio_pika-8.2.2-py3-none-any.whl", hash = "sha256:0fe411be03f352389f0e12445f19e0c9e3a77ea03d334c33067239027387e0ba"},
+    {url = "https://files.pythonhosted.org/packages/d1/5b/b79d8ae87a5385fc993cc7d5f51d081855fb785e864f5ed07ef93ce5e83f/aio-pika-8.2.2.tar.gz", hash = "sha256:5b610a217f9aebd1773e6383f506da6df4e962ceaa3f3cf786fdbf669ce7b86f"},
 ]
 "aiormq 6.4.2" = [
     {url = "https://files.pythonhosted.org/packages/b7/93/cd671ea26f8f208bbcaf0fb0f3aa8a55e00ffc0a2f539d93c02919376932/aiormq-6.4.2-py3-none-any.whl", hash = "sha256:fdbf2efed73a2e07437de3af5e3591165efb155a18394dc7295cac9e80943c62"},
