@@ -7,8 +7,8 @@ authors = [
     {name = "thiagola92", email = "thiagola92@gmail.com"},
 ]
 dependencies = [
-    "aio-pika>=8.0.3",
-    "structlog>=22.1.0",
+    "aio-pika==8.2.2",
+    "structlog==22.1.0",
     "page-infra @ git+https://github.com/la-catalog/page-infra.git",
     "rabbit-models @ git+https://github.com/la-catalog/rabbit-models.git",
     "url-builder @ git+https://github.com/la-catalog/url-builder.git",
@@ -17,6 +17,7 @@ dependencies = [
 [project.urls]
 repository = "https://github.com/la-catalog/search-filler"
 
+[project.optional-dependencies]
 [tool.pdm]
 
 [tool.pdm.scripts]
@@ -26,8 +27,8 @@ isort = "python -m isort -v --ac ."
 
 [tool.pdm.dev-dependencies]
 lint = [
-    "black",
-    "isort"
+    "black==22.8.0",
+    "isort==5.10.1",
 ]
 
 [build-system]
