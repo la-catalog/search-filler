@@ -147,7 +147,7 @@ name = "page-infra"
 version = "0.1.0"
 requires_python = ">=3.10"
 git = "https://github.com/la-catalog/page-infra.git"
-revision = "07a1ccb3fac03f07e329085f12440e5d66191945"
+revision = "1357e5a290b155874a9e34b77061ff437572a84f"
 summary = ""
 dependencies = [
     "aio-pika==8.2.2",
@@ -268,7 +268,7 @@ name = "url-builder"
 version = "0.1.0"
 requires_python = ">=3.10"
 git = "https://github.com/la-catalog/url-builder.git"
-revision = "00088408fe62fb5679a27b8a4e14b2b6e97d3818"
+revision = "ad27d519ba20d5f90b5b22377b5319cdf61a1666"
 summary = ""
 dependencies = [
     "pydantic==1.10.2",
