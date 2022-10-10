@@ -299,7 +299,7 @@ dependencies = [
 
 [metadata]
 lock_version = "4.0"
-content_hash = "sha256:47723d0c6075e55e507c8bedf336f20393e275a344e3c30846db7d95a9612597"
+content_hash = "sha256:5689182499825bb74efa21e96d661b84e8fbcc9c0a9ea3f377cc457f77d20986"
 
 [metadata.files]
 "aio-pika 8.2.2" = [
