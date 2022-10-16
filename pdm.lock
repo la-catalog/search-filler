@@ -1,6 +1,6 @@
 [[package]]
 name = "aio-pika"
-version = "8.2.2"
+version = "8.2.4"
 requires_python = ">3.6, <4"
 summary = "Wrapper for the aiormq for asyncio and humans."
 dependencies = [
@@ -42,6 +42,17 @@ name = "camel-converter"
 version = "1.0.6"
 requires_python = ">=3.7,<4.0"
 summary = "Converts a string from snake case to camel case or camel case to snake case"
+
+[[package]]
+name = "camel-converter"
+version = "1.0.6"
+extras = ["pydantic"]
+requires_python = ">=3.7,<4.0"
+summary = "Converts a string from snake case to camel case or camel case to snake case"
+dependencies = [
+    "camel-converter==1.0.6",
+    "pydantic<2.0.0,>=1.8.2",
+]
 
 [[package]]
 name = "certifi"
@@ -105,11 +116,11 @@ summary = "Measure the amount of time that elapses between lap times"
 
 [[package]]
 name = "meilisearch"
-version = "0.20.0"
+version = "0.22.1"
 requires_python = ">=3"
 summary = "The python client for Meilisearch API."
 dependencies = [
-    "camel-converter",
+    "camel-converter[pydantic]",
     "requests",
 ]
 
@@ -147,14 +158,14 @@ name = "page-infra"
 version = "0.1.0"
 requires_python = ">=3.10"
 git = "https://github.com/la-catalog/page-infra.git"
-revision = "d920c1bce0c7d456f7c255838a55eb933fef2412"
+revision = "de37a26cec11a8389adf1d3800fe416ca393b0ff"
 summary = ""
 dependencies = [
-    "aio-pika==8.2.2",
+    "aio-pika==8.2.4",
     "la-stopwatch==0.0.9",
-    "meilisearch==0.20.0",
+    "meilisearch==0.22.1",
     "motor==3.0.0",
-    "page-models @ git+https://github.com/la-catalog/page-models.git",
+    "page-models==0.1.0",
     "redis==4.3.4",
     "structlog==22.1.0",
 ]
@@ -163,8 +174,6 @@ dependencies = [
 name = "page-models"
 version = "0.1.0"
 requires_python = ">=3.10"
-git = "https://github.com/la-catalog/page-models.git"
-revision = "d6a6e602ecd297470edaa971ec8b4e56d5659dbf"
 summary = ""
 dependencies = [
     "gtin==1.3.1649173518",
@@ -215,7 +224,7 @@ name = "rabbit-models"
 version = "0.1.0"
 requires_python = ">=3.10"
 git = "https://github.com/la-catalog/rabbit-models.git"
-revision = "f3147a461777790b20bc3b2da001e6226a8e79b3"
+revision = "2a7ca0e72a99e655ad71380f348f2c6181f9a702"
 summary = ""
 dependencies = [
     "pydantic==1.10.2",
@@ -267,7 +276,7 @@ name = "url-builder"
 version = "0.1.0"
 requires_python = ">=3.10"
 git = "https://github.com/la-catalog/url-builder.git"
-revision = "8390530ed1b8e35fd775102f198dce4eb8689488"
+revision = "a11ee1bbaaa07a59a9bba81b5cce5514aef797f4"
 summary = ""
 dependencies = [
     "pydantic==1.10.2",
@@ -298,12 +307,12 @@ dependencies = [
 
 [metadata]
 lock_version = "4.0"
-content_hash = "sha256:102902772dd52cb6b3090baa64bc4f74716ac9d8e966ebd2dec4e34d39774c91"
+content_hash = "sha256:1322f9d95ce19568565e5a6a20d5ceee4bab9d4a8f7c6fce0d666d983da5a27b"
 
 [metadata.files]
-"aio-pika 8.2.2" = [
-    {url = "https://files.pythonhosted.org/packages/27/a3/149746c28ea706406dcc6cca95c410163e4543898008d021e437e8819675/aio_pika-8.2.2-py3-none-any.whl", hash = "sha256:0fe411be03f352389f0e12445f19e0c9e3a77ea03d334c33067239027387e0ba"},
-    {url = "https://files.pythonhosted.org/packages/d1/5b/b79d8ae87a5385fc993cc7d5f51d081855fb785e864f5ed07ef93ce5e83f/aio-pika-8.2.2.tar.gz", hash = "sha256:5b610a217f9aebd1773e6383f506da6df4e962ceaa3f3cf786fdbf669ce7b86f"},
+"aio-pika 8.2.4" = [
+    {url = "https://files.pythonhosted.org/packages/04/12/26955aa09742a3fc1a7a4996b214728a7735b4cb1dff96d9127418bfd197/aio_pika-8.2.4-py3-none-any.whl", hash = "sha256:997e74efab11c34f37ff20e91316a4d7f5d3ae13167e3adec809aac09c7b84aa"},
+    {url = "https://files.pythonhosted.org/packages/b9/99/cb8a42122531a5c2fbc78f9e8b66eceee73a5959f8caec2e7e38b3a57802/aio-pika-8.2.4.tar.gz", hash = "sha256:71f0a67cc45bdd0e6b64121f2eda8462937a2d83266855a55d7d8c106c14d3d6"},
 ]
 "aiormq 6.4.2" = [
     {url = "https://files.pythonhosted.org/packages/b7/93/cd671ea26f8f208bbcaf0fb0f3aa8a55e00ffc0a2f539d93c02919376932/aiormq-6.4.2-py3-none-any.whl", hash = "sha256:fdbf2efed73a2e07437de3af5e3591165efb155a18394dc7295cac9e80943c62"},
@@ -376,9 +385,9 @@ content_hash = "sha256:102902772dd52cb6b3090baa64bc4f74716ac9d8e966ebd2dec4e34d3
     {url = "https://files.pythonhosted.org/packages/05/9b/523b5d9b1015e32f9bbc0a9cf1576de66a3e9ce57a6fe7e67f79d7faff95/la-stopwatch-0.0.9.tar.gz", hash = "sha256:f8b3f0e40bb97c0376561af40366bcf98d1090efe48338654b5729a671a25aa0"},
     {url = "https://files.pythonhosted.org/packages/5e/18/efdc736262b05204d73d3e4fb4a7eb8909ddf7f200389e7830d102ea8567/la_stopwatch-0.0.9-py3-none-any.whl", hash = "sha256:90d1e901556d8c4d0fd8dd48225f88e5cdd504b86a093ab6ab538d25db2d9ea1"},
 ]
-"meilisearch 0.20.0" = [
-    {url = "https://files.pythonhosted.org/packages/5a/85/f7db12773070448c97e893613ae682a00433fd6a2c41a5d2b4e53d96e64c/meilisearch-0.20.0.tar.gz", hash = "sha256:2e80596cf1ccc594e1f4e2bd5c03028dcfb6aa8920c5745297861f39dec8b0a7"},
-    {url = "https://files.pythonhosted.org/packages/7d/b5/dbdd05f01de2ae716d941132f70c948d2a9687827303cc8fa9773a541680/meilisearch-0.20.0-py3-none-any.whl", hash = "sha256:9be0944e6d4629edb7c0f55ebda9057d110d97ce566283244f64edb8ef708329"},
+"meilisearch 0.22.1" = [
+    {url = "https://files.pythonhosted.org/packages/85/06/48e26acab7a39be75e9b7f7b5f95c91e3e809d3439ace751893a41979b39/meilisearch-0.22.1-py3-none-any.whl", hash = "sha256:868d43d5af12e57c45c59e138e63c0e3a3a1bfbce38c0ee71f1d817f2d2fc2f1"},
+    {url = "https://files.pythonhosted.org/packages/8f/6f/8029d3c9f791f1d9f6b46ed2cb9cfa274d579418e541f640d14c12626361/meilisearch-0.22.1.tar.gz", hash = "sha256:81b703c0525ac670153585f6f2f93fce0f99f533e530c26a11ed204fae801670"},
 ]
 "motor 3.0.0" = [
     {url = "https://files.pythonhosted.org/packages/84/00/3865aec63ed89170d879a13928cdeb5e452f50e23fcc82955bed446053aa/motor-3.0.0-py3-none-any.whl", hash = "sha256:b076de44970f518177f0eeeda8b183f52eafa557775bfe3294e93bda18867a71"},
