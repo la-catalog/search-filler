@@ -7,8 +7,8 @@ authors = [
     {name = "thiagola92", email = "thiagola92@gmail.com"},
 ]
 dependencies = [
-    "aio-pika==8.2.4",
-    "structlog==22.1.0",
+    "aio-pika==8.2.5",
+    "structlog==22.2.0",
     "page-infra @ git+https://github.com/la-catalog/page-infra.git",
     "rabbit-models @ git+https://github.com/la-catalog/rabbit-models.git",
     "url-builder @ git+https://github.com/la-catalog/url-builder.git",
